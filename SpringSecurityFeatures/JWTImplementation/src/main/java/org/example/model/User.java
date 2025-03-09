@@ -1,0 +1,84 @@
+package org.example.model;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.List;
+
+@Entity
+@Table(name="users")
+@Setter
+@Getter
+//User Details intergrates with spring security , provides user info
+public class User implements UserDetails {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    //email is unique and cannot be null
+    @Column(unique = true,nullable = false)
+    private String username;
+
+    @Column(unique = true,nullable = false)
+    private String email;
+
+    @Column(nullable = false)
+    private String password;
+
+    private boolean enabled;
+
+    @Column(name="verification_code")
+    private String verificationCode;
+
+    @Column(name="verification_expiration")
+    private LocalDateTime verificationExpirationAt;
+
+
+
+
+
+    public User(String username, String email, String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
+
+    // need this due to object creation through jpa repository
+    public User() {
+    }
+
+
+    //Overridden from the UserDetails interface , basically returns role list and permissions
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of();
+    }
+
+
+    // Overridden from the UserDetails interface, is the account non expired
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return enabled;
+    }
+}

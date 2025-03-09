@@ -3,8 +3,8 @@ services:
     image: postgres:latest
     container_name: postgres-db
     environment:
-      POSTGRES_USER: {SPRING_DATASOURCE_USERNAME}  # Database user
-      POSTGRES_PASSWORD: {SPRING_DATASOURCE_PASSWORD}  # Database password
+      POSTGRES_USER: myuser  # Database user
+      POSTGRES_PASSWORD: mypassword  # Database password
       POSTGRES_DB: mydatabase  # Database name
     ports:
       - "5432:5432"  # Exposes port 5432 for the PostgreSQL database
