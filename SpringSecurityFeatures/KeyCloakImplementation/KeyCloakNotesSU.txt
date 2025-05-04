@@ -1,2 +1,14 @@
 Site for Docker: https://quay.io/repository/keycloak/keycloak
 
+# Make sure once you get the container running, you can access it at localhost:9090
+
+# then to access the admin console, go to http://localhost:9090/auth/admin
+
+# then to access the realm, go to http://localhost:9090/auth/realms/SpringBootKeycloak
+
+# create a realm and add users to it , take note of the client id and client secret
+
+# make users and create passwords for them and add them to the realm
+
+# go to realm settings and find the endpoint url for open id endpoint configuration
+

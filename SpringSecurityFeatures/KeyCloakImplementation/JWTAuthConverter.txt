@@ -1,0 +1,24 @@
+JwtAuthenticationConverter is like telling Spring:
+
+“Here’s the shape of the JWT that Keycloak gives us, and here’s where to find the roles.”
+
+Keycloak’s JWT looks like this (simplified):
+
+json
+Copy
+Edit
+{
+  "realm_access": {
+    "roles": ["user", "admin"]
+  }
+}
+But Spring expects something more like this by default:
+
+json
+Copy
+Edit
+{
+  "authorities": ["ROLE_USER", "ROLE_ADMIN"]
+}
+So the converter bridges that gap — it tells Spring where to look (realm_access.roles) and adds the ROLE_ prefix so Spring understands and uses those roles for access control.
+

@@ -25,6 +25,7 @@ services:
       - KC_BOOTSTRAP_ADMIN_PASSWORD=admin_password # sets the password for the initial admin user
     command:
       - start-dev # starts Keycloak in development mode NOT PROD READY
+      # need to consider adding a reverse proxy to hide ports from the internet it can also handle things like SSL termination, load balancing, and traffic routing.
     ports:
       - "9090:8080" # maps port 9090 on the host to port 8080 in the container
     depends_on:
