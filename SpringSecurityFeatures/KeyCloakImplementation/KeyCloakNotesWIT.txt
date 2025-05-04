@@ -1,0 +1,22 @@
+Keycloak is an open-source identity and access management (IAM) solution for modern applications and services. It provides centralized authentication and authorization features, such as:
+
+    Single Sign-On (SSO): Users can log in once and access multiple applications without needing to log in again.
+
+    Identity Brokering: Allows integration with third-party identity providers like Google, Facebook, or corporate LDAP servers.
+
+    User Federation: Can sync users from external sources, such as LDAP or Active Directory.
+
+    Social Login: Supports social login via external services like Google, Facebook, etc.
+
+    Authorization Services: Manages roles and permissions to control access to resources.
+
+    Keycloak simplifies user management by handling authentication (login/logout) and authorization (access control), making it easier for developers to secure applications and services.
+
+Example:
+    Step 1: The user logs in to any of the applications (HR, Dashboard, or Expense Tracking).
+
+    Step 2: Keycloak authenticates the user and returns a token (like JWT).
+
+    Step 3: The user can now seamlessly access the other applications without needing to log in again, as Keycloak’s SSO mechanism ensures that they are logged in across all systems.
+
+    Step 4: Based on the user’s roles (e.g., HR Admin, Employee), Keycloak controls what features of the application they can access, ensuring that, for example, a regular employee cannot modify HR data.
