@@ -1,0 +1,7 @@
+First you need to install the keycloak-angular package, which is a wrapper around the keycloak-js library, which is what you use to access the Keycloak APIs.
+
+npm install @keycloak/keycloak-angular
+
+Once you have the keycloak-angular package installed, you can use it in your Angular application to access the Keycloak APIs.
+
+then in keycloak make sure to create the client:https://medium.com/@indrajitsaha7597/seamless-keycloak-integration-with-angular-a-step-by-step-guide-6e6724aa34c3
