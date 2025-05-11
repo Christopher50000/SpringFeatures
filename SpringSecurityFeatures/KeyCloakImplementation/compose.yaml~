@@ -1,0 +1,44 @@
+# The docker-compose file for the Keycloak server container image
+services:
+  postgres:
+    image: postgres:15
+    container_name: keycloak-postgres
+    environment:
+      - POSTGRES_DB=keycloak # sets the name of the database
+      - POSTGRES_USER=keycloak # sets the username for connecting to the database
+      - POSTGRES_PASSWORD=keycloak_password # sets the password for connecting to the database
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - keycloak-network
+    restart: always
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: keycloak
+    environment: # environment variables , look up keycloak documentation for more https://www.keycloak.org/server/containers
+      - KC_DB=postgres # tells Keycloak to use PostgreSQL
+      - KC_DB_URL=jdbc:postgresql://postgres:5432/keycloak # specifies the connection URL , including the host, port, and database name
+      - KC_DB_USERNAME=keycloak # sets the username for connecting to the PostgreSQL database
+      - KC_DB_PASSWORD=keycloak_password # sets the password for connecting to the PostgreSQL database
+      - KC_BOOTSTRAP_ADMIN_USERNAME=admin # sets the username for the initial admin user
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=admin_password # sets the password for the initial admin user
+    command:
+      - start-dev # starts Keycloak in development mode NOT PROD READY
+      # need to consider adding a reverse proxy to hide ports from the internet and 
+    ports:
+      - "9090:8080" # maps port 9090 on the host to port 8080 in the container
+    depends_on:
+      - postgres
+    networks:
+      - keycloak-network
+    restart: always
+
+
+networks:
+  keycloak-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
+#http:hgs//localhost:9090/admin

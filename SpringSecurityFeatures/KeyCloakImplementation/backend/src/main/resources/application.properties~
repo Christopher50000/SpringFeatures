@@ -1,0 +1,15 @@
+spring.application.name=KeyCloakImplementation
+spring.application.port=8081
+#Logging Configuration
+logging.level.org.springframework.security=trace
+
+#Key Cloak Configuration
+# you can find this in the keycloak admin console if you go the realm open id connect
+
+#for client
+spring.security.oauth2.client.registration.keycloak.client-id=demo
+spring.security.oauth2.client.registration.keycloak.scope=openid
+spring.security.oauth2.client.provider.keycloak.issuer-uri=http://localhost:9090/realms/myrealm
+
+#for keycloak configuration for resource server
+spring.security.oauth2.resourceserver.jwt.issuer-uri=http://localhost:9090/realms/myrealm
