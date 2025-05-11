@@ -12,3 +12,10 @@ Site for Docker: https://quay.io/repository/keycloak/keycloak
 
 # go to realm settings and find the endpoint url for open id endpoint configuration
 
+# make sure you have roles for the realms and assign roles accordingly to the users
+# to note when enabling new users make sure to use http://localhost:{port}/realms/{realmName}/account
+# Also make sure to always assign a seperate admin for each realm
+
+
+#Lastly to add extra login options for keycloak such as github, google, facebook, etc, you can do that in the admin console
+# need to configure client secrets and add them to the realm from the 3rd party login providers

@@ -1,20 +1,39 @@
 package org.example.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-@RestController
+@RestController("/api")
 public class Controller {
 
-    @GetMapping("/helloUser")
+    @PreAuthorize("hasRole('USER')")
+    @GetMapping("/user/helloUser")
     public String helloUser()
     {
+        System.out.println("Hello User");
         return "Hello User";
     }
 
-    @GetMapping("/helloAdmin")
+    @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/admin/helloAdmin")
     public String helloAdmin()
     {
         return "Hello Admin";
+    }
+
+    @PreAuthorize("hasRole('USER')")
+    @GetMapping("/api/user/data")
+    public String UserData()
+    {
+        System.out.println("Hello User");
+        return "User Data";
+    }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/api/admin/data")
+    public String dataAdmin()
+    {
+        return "Admin Data";
     }
 }
 
