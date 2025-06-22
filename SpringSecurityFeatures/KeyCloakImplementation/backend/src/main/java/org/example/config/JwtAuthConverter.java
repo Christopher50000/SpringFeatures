@@ -65,8 +65,6 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
 //        When you extract roles from a JWT or from a database, you turn them into a list of SimpleGrantedAuthority objects so Spring Security can use them like this:
 //
 //        java
-//                Copy
-//        Edit
 //        List<SimpleGrantedAuthority> authorities = List.of(
 //                new SimpleGrantedAuthority("ROLE_USER"),
 //                new SimpleGrantedAuthority("ROLE_ADMIN")
