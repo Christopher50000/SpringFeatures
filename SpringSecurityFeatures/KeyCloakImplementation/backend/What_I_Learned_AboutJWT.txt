@@ -1,0 +1,26 @@
+JWT has 3 main parts:
+Header — metadata about the token and signing method
+
+Payload — contains the claims (the actual data)
+
+Signature — used to verify the token wasn’t tampered with
+
+The claims live in the payload section as key-value pairs.
+
+A JWT payload looks like this (decoded):
+
+json
+{
+  "sub": "1234567890",
+  "preferred_username": "johndoe",
+  "email": "johndoe@example.com",
+  "exp": 1687500000,
+  "roles": ["USER", "ADMIN"]
+}
+Each key-value pair here (sub, email, roles) is a claim.
+
+
+JWT Part	Description
+Header	Metadata (alg, typ, etc.)
+Payload	Claims — the token’s data
+Signature	Token verification

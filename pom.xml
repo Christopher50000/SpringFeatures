@@ -12,7 +12,7 @@
     <!-- Modules to include in the build -->
     <modules>
         <module>SpringSecurityFeatures/JWTImplementation</module>
-        <module>SpringSecurityFeatures/KeyCloakImplementation</module>
+        <module>SpringSecurityFeatures/KeyCloakImplementation/backend</module>
     </modules>
 
     <!-- Needed for the version of spring boot version for all other modules  -->

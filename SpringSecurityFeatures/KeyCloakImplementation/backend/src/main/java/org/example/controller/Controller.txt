@@ -1,0 +1,6 @@
+Principle:
+The Principal represents the currently authenticated user and provides access to their username,
+ typically derived from the preferred_username claim in the Keycloak token.
+
+ Authentication:
+ Represents object represents the full security contenxt of the request. It contains information about the authenticated user

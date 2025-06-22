@@ -20,6 +20,7 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
 
     private final JwtGrantedAuthoritiesConverter jwtGrantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
 
+
     @Override
     public AbstractAuthenticationToken convert(Jwt jwt) {
         Collection<GrantedAuthority> authorities = Stream.concat(
@@ -27,7 +28,10 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
                 extractRoles(jwt).stream()
         ).collect(Collectors.toSet());
 
-        return new JwtAuthenticationToken(jwt, authorities);
+
+
+        // we need to add the username to the token so that when we use principal we can get the username instead of the sub name which is the subject ID
+        return new JwtAuthenticationToken(jwt, authorities, jwt.getClaimAsString("preferred_username"));
     }
 
     private Collection<? extends GrantedAuthority> extractRoles(Jwt jwt) {

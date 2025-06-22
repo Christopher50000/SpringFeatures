@@ -1,0 +1,5 @@
+User ---> [Frontend] ---> Redirect to Keycloak Login
+                         <--- Login Successful + JWT Token
+User ---> [Frontend with JWT] ---> API Request with JWT
+                                <--- Backend verifies JWT, gets user info
+                                <--- Returns user-specific data

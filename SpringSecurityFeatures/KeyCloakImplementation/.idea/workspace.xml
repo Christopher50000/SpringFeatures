@@ -8,22 +8,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/.editorconfig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/AngularSideForKeyCloak.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/angular.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/server.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/src/app/app.component.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/src/app/app.component.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/src/app/app.component.spec.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/src/app/app.config.server.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/src/app/app.config.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/src/app/app.routes.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/src/main.server.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/src/main.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/src/styles.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/my-angular-keycloak-app/tsconfig.app.json" beforeDir="false" />
@@ -59,7 +55,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\chris\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Users\\chris\\OneDrive\\Documents\\Coding\\SpringBoot_Tutorials\\SpringSecurityFeatures\\KeyCloakImplementation\\frontend\\my-angular-keycloak-app\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -83,12 +79,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1746993430128</updated>
-      <workItem from="1746993431517" duration="3480000" />
+      <workItem from="1746993431517" duration="5843000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/frontend/my-angular-keycloak-app/node_modules/karma/config.tpl.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

@@ -17,5 +17,8 @@ Site for Docker: https://quay.io/repository/keycloak/keycloak
 # Also make sure to always assign a seperate admin for each realm
 
 
-#Lastly to add extra login options for keycloak such as github, google, facebook, etc, you can do that in the admin console
+# to add extra login options for keycloak such as github, google, facebook, etc, you can do that in the admin console
 # need to configure client secrets and add them to the realm from the 3rd party login providers
+
+
+# To allow users to sign up in key cloak, you need to go to realm settings and enable registration
